@@ -1,0 +1,133 @@
+<!-- comparison.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Bootstrap Components</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="../../style.css">
+</head>
+
+<body class="common-background">
+
+  <div class="container-fluid">
+    <nav class="navbar navbar-expand-md navbar-light bg-light nav-padding">
+
+
+
+      <a class="navbar-brand menu-color"
+        href="file:///C:/Users/garys/version-control/BootCampHomework/Web-Design-Challenge/index.html" title="Home">
+        <div style="padding-left: 20px; padding-right: 20px; color:white;">
+          <strong>Latitude</strong>
+        </div>
+      </a>
+
+      <div class="collapse navbar-collapse " id="navbarSupportedContent ">
+        <ul class="nav navbar-nav ml-auto ">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle mr-sm-2 active" href="#" id="navbarDropdown" role="button"
+              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Plots and details">
+              Plots
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="./max_temperature.html">Max Temperature</a>
+              <a class="dropdown-item" href="./humidity.html">Humidity</a>
+              <a class="dropdown-item" href="./cloudiness.html">Cloudiness</a>
+              <a class="dropdown-item" href="./wind_speed.html">Wind Speed</a>
+            </div>
+          </li>
+          <li class="nav-item active ">
+            <a class="nav-link" href="./comparison.html" title="Side by side comparison">Comparison </a>
+
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="./data.html" title="Source Data">Data</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+  <div class="dropdown" id="menu" style="margin-left: 55px; margin-top: 1px;">
+    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+      aria-haspopup="true" aria-expanded="false">
+      Visualizations
+    </button>
+    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+      <a class="dropdown-item" href="./max_temperature.html">Max Temperature</a>
+      <a class="dropdown-item" href="./humidity.html">Humidity</a>
+      <a class="dropdown-item" href="./cloudiness.html">Cloudiness</a>
+      <a class="dropdown-item" href="./wind_speed.html">Wind Speed</a>
+      <a class="dropdown-item" href="./comparison.html">Comparison</a>
+      <a class="dropdown-item" href="./data.html">Data</a>
+    </div>
+  </div>
+  <div class="row single-post mt-5 para-background ">
+    <div class="col-md-7 para-bg-seashell clearfix">
+      <h1 class="teal-font margin-text"></h1>
+    </div>
+    <div class="col-md-1 common-background"></div>
+    <div class="col-md-4 para-background">
+    </div>
+  </div>
+  <!-- Left - Introduction,  right - visualization grid -->
+
+  <div class="row single-post para-background ">
+    <div class="col-md-7 para-bg-seashell clearfix" style="text-align:center;">
+      <h3 class="teal-font  margin-text">Maximum Temperature</h3>
+      <p class="teal-font small-margin-text" >November 17, 2019</p>
+      <hr>
+      <img class="col-lg-8 img-responsive" src="../assets/images/Max_Temp.png" alt="Max_Temp.png">
+      </a>
+      <br>
+      <p class="margin-text" style="text-align: left;">
+      The data samples were taken about a month before the winter solstice and the temperatures shown reflect this.  The southern hemisphere 
+      temperatures near 80 degrees between -20 and -30 degrees latitude is more concentrated that the northern hemiphere temperatures between
+      +20 and +30 degrees latitude.  It is also interesting to look at the outliers of the coldest and hottest temperatures.  The hottest
+      location is below the equator in Rio Tercero, Argentina with a temperature of 93.88 degrees F.  The coldest location was in Nadym, Russia 
+      with a temperature of -24.93 degrees F.  Observe the general readings of temperature at -30 degrees and +30 degrees.  Winter is about to 
+      arrive in the north.
+    </p>
+    </div>
+    <div class="col-md-1 common-background">
+    </div>
+    <!-- Second of two columns -->
+    <div class="col-md-4 para-bg-seashell clearfix" style="text-align:center;">
+      <h3 class="teal-font margin-text">Visualizations</h3>
+      <p class="teal-font" style="text-align: left;">Click the images to view each plot.</p>
+      <hr>
+      <a href="max_temperature.html">
+        <img class="float-center col-lg-5 img-responsive" src="../assets/images/Max_Temp.png" alt="Max_Temp.png"
+          title="Maximum Temperature">
+      </a>
+      <a href="./humidity.html">
+        <img class="float-center col-lg-5 img-responsive" src="../assets/images/Humidity.png" alt="Humidity.png"
+          title="Humidity">
+      </a>
+      <br> <br>
+      <a href="./cloudiness.html">
+        <img class="float-center col-lg-5 img-responsive" src="../assets/images/Cloudiness.png" alt="Cloudiness.png"
+          title="Cloudiness">
+      </a>
+      <a href="./wind_speed.html">
+        <img class="float-center col-lg-5 img-responsive" src="../assets/images/Wind_Speed.png" alt="Wind_Speed.png"
+          title="Wind Speed">
+      </a>
+    </div>
+  </div>
+</body>
+
+</html>

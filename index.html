@@ -1,0 +1,160 @@
+<!-- index.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Bootstrap Components</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body class="common-background">
+
+    <div class="container-fluid">
+        <nav class="navbar navbar-expand-md navbar-light bg-light nav-padding">
+
+
+
+            <a class="navbar-brand menu-color"
+                href="file:///C:/Users/garys/version-control/BootCampHomework/Web-Design-Challenge/index.html" title="Home">
+                <div style="padding-left: 20px; padding-right: 20px; color:white;">
+                    <strong>Latitude</strong>
+                </div>
+            </a>
+
+
+
+
+
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="nav navbar-nav ml-auto">
+                    <li class="nav-item dropdown active">
+                        <a class="nav-link dropdown-toggle mr-sm-2 active" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Plots and details">
+                            Plots
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="./WebVisualizations/visualizations/max_temperature.html">Max Temperature</a>
+                            <a class="dropdown-item" href="WebVisualizations/visualizations/humidity.html">Humidity</a>
+                            <a class="dropdown-item" href="WebVisualizations/visualizations/cloudiness.html">Cloudiness</a>
+                            <a class="dropdown-item" href="WebVisualizations/visualizations/wind_speed.html">Wind Speed</a>
+
+                        </div>
+                    </li>
+                    <li class="nav-item active ">
+                        <a class="nav-link" href="WebVisualizations/visualizations/comparison.html" title="Side by side comparison">Comparison <span
+                                class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="./WebVisualizations/visualizations/data.html" title="Source Data">Data</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <div class="dropdown" id="menu" style="margin-left: 55px; margin-top: 1px;">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            WebVisualizations/visualizations
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="./WebVisualizations/visualizations/max_temperature.html">Max Temperature</a>
+            <a class="dropdown-item" href="WebVisualizations/visualizations/humidity.html">Humidity</a>
+            <a class="dropdown-item" href="WebVisualizations/visualizations/cloudiness.html">Cloudiness</a>
+            <a class="dropdown-item" href="WebVisualizations/visualizations/wind_speed.html">Wind Speed</a>
+            <a class="dropdown-item" href="WebVisualizations/visualizations/comparison.html">Comparison</a>
+            <a class="dropdown-item" href="./WebVisualizations/visualizations/data.html">Data</a>
+        </div>
+    </div>
+
+    <!-- Left - Introduction,  right - visualization grid -->
+    <div class="row single-post mt-5 para-background">
+
+        <!-- First of two columns -->
+
+        <div class="col-md-7 para-bg-seashell clearfix">
+            <h2 class="teal-font margin-text title-font">Summary: Latitude vs. X</h2>
+            <hr>
+            <img class="float-left col-lg-5 img-responsive" src="WebVisualizations/assets/images/Max_Temp.png" alt="Max_Temp.png">
+
+            <p class="margin-text">
+                The Latitude project compares maximum temperature, humidity, winds speed, and cloudiness based on the
+                earth's latitude.
+                All samples are taken using the same date.
+
+                Sample sites were selected by randomly generating latitude and longitude pairs then using the
+                <strong>citypy</strong>
+                library to select the nearest city. This method of finding cities generally found approximately 620
+                cities from the 1500
+                latitude-longitude pairs randomly generated. Calling the api directly using the generated latitudes and
+                longitudes was
+                attempted but produced an excessive amount of empty results. The strength of using citypy is that it
+                greatly reduces
+                queries to the api that return nothing. The weakness is that not all latitudes are represented equally.
+                This could be
+                caused by citypy if its locations favor the northern hemisphere. There could also be more northern
+                hemisphere reporting
+                locations on <a href="https://openweathermap.org/"><strong>openweathermap.org.</strong></a>
+
+                <br><br>
+                The <a href="https://openweathermap.org/"><strong>openweathermap.org</strong></a> public api was used to
+                aquire the data.
+                Five-hundred samples were taken and plotted. Calls to the api that returned no results were omitted.
+                Very little data
+                munging was required because the returned data was clean. Pandas was used to put the data in a data
+                frames.
+                Matplotlib was used to create the virtualizations.
+                <br><br>
+                The data for these charts was taken on November 17, 2019.
+            </p>
+        </div>
+
+        <div class="col-md-1 common-background">
+        </div>
+        <!-- Second of two columns -->
+        <div class="col-md-4 para-bg-seashell clearfix" style="text-align:center;">
+            <h3 class="teal-font margin-text">WebVisualizations/visualizations</h3>
+            <p class="teal-font" style="text-align: left;">Click the images to view each plot.</p>
+            <hr>
+            <br>
+            <a href="WebVisualizations/visualizations/max_temperature.html">
+                <img class="float-center col-lg-5 img-responsive" src="WebVisualizations/assets/images/Max_Temp.png" alt="Max_Temp.png"
+                    title="Maximum Temperature">
+            </a>
+
+            <a href="WebVisualizations/visualizations/humidity.html">
+                <img class="float-center col-lg-5 img-responsive" src="WebVisualizations/assets/images/Humidity.png" alt="Humidity.png"
+                    title="Humidity">
+            </a>
+            <br>
+            <br>
+            <a href="WebVisualizations/visualizations/cloudiness.html">
+                <img class="float-center col-lg-5 img-responsive" src="WebVisualizations/assets/images/Cloudiness.png"
+                    alt="Cloudiness.png" title="Cloudiness">
+            </a>
+            <a href="WebVisualizations/visualizations/wind_speed.html">
+                <img class="float-center col-lg-5 img-responsive" src="WebVisualizations/assets/images/Wind_Speed.png"
+                    alt="Wind_Speed.png" title="Wind Speed">
+            </a>
+        </div>
+    </div>
+    </div>
+</body>
+
+</html>
